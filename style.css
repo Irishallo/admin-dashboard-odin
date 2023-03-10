@@ -69,10 +69,16 @@ table {
     grid-template-columns: 1fr 3fr;
     justify-items: center;
     align-items: center;
+    gap: 10px;
 }
 
-.sideItem > svg {
+.sidesvg {
+    justify-self: end;
     width: 30px;
+}
+
+.sidetitle {
+    justify-self: start;
 }
 
 #header {
@@ -84,11 +90,25 @@ table {
     align-items: center;
 }
 
+#searchbox {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    justify-self: stretch;
+}
+
 #search {
     width: 30px;
     height: 30px;
     background-color: #ffffff00;
     border: none;
+    justify-self: end;
+}
+
+#searchbar {
+    justify-self: start;
+    width: clamp(200px, 80%, 1000px);
+    border-radius: 20px;
+    border: 1px grey solid;
 }
 
 #accountsettings {
@@ -98,6 +118,16 @@ table {
 
 #bellicon {
     width: 30px;
+}
+
+#accountname {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+#accpic {
+    grid-area: 1 / 1 / 3 / 2;
 }
 
 #main-content {
@@ -118,16 +148,17 @@ table {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-auto-rows: 1fr;
-    gap: 10px;
+    gap: 5px;
 }
 
 .project {
     background-color: beige;
     border: 1px solid black;
     border-radius: 5px;
-    margin: 20px;
+    margin: 10px;
     height: 150px;
     padding: 10px;
+    width: clamp(200px, 90%, 1000px);
 }
 
 .project > svg {
